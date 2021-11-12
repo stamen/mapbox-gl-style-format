@@ -1,0 +1,24 @@
+{
+  "name": "mapbox-gl-style-format",
+  "description": "Format Mapbox GL styles",
+  "version": "0.1.0",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@mapbox/mapbox-gl-style-spec": "^13.23.0",
+    "json-stringify-pretty-compact": "^3.0.0",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "bin": {
+    "mapbox-gl-style-format": "bin/mapbox-gl-style-format"
+  }
+}

@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
+
+const { format } = require('../dist/main');
+
+const argv = yargs(hideBin(process.argv))
+  .usage('Usage: $0 infile outfile')
+  .example('$0 style.json style-formatted.json')
+  .parse();
+
+let inFile = argv._[0] ? argv._[0] : process.stdin.fd;
+let outFile = argv._[1] ? argv._[1] : process.stdout.fd;
+
+fs.readFile(inFile, 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  const inStyle = JSON.parse(data);
+  fs.writeFile(outFile, format(inStyle), err => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+  });
+});
