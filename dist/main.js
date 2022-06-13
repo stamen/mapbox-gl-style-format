@@ -16,7 +16,14 @@ $parcel$export(module.exports, "format", () => $915ef6a9925cbcd7$export$2e2bcd87
 function $915ef6a9925cbcd7$var$sortKeysBy(obj, reference) {
     const result = {
     };
-    for(const key in reference)if (obj[key] !== undefined) result[key] = obj[key];
+    for(const key in reference)if (obj[key] !== undefined) {
+        result[key] = obj[key];
+        if (key === 'layout' || key === 'paint') {
+            result[key] = {
+            };
+            for (const subKey of Object.keys(obj[key]).sort())result[key][subKey] = obj[key][subKey];
+        }
+    }
     for(const key1 in obj)if (result[key1] === undefined) result[key1] = obj[key1];
     return result;
 }

@@ -8,7 +8,14 @@ import $lN7Lq$jsonstringifyprettycompact from "json-stringify-pretty-compact";
 function $c482f29359734304$var$sortKeysBy(obj, reference) {
     const result = {
     };
-    for(const key in reference)if (obj[key] !== undefined) result[key] = obj[key];
+    for(const key in reference)if (obj[key] !== undefined) {
+        result[key] = obj[key];
+        if (key === 'layout' || key === 'paint') {
+            result[key] = {
+            };
+            for (const subKey of Object.keys(obj[key]).sort())result[key][subKey] = obj[key][subKey];
+        }
+    }
     for(const key1 in obj)if (result[key1] === undefined) result[key1] = obj[key1];
     return result;
 }
