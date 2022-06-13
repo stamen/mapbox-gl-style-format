@@ -9,6 +9,13 @@ function sortKeysBy(obj, reference) {
   for (const key in reference) {
     if (obj[key] !== undefined) {
       result[key] = obj[key];
+
+      if (key === 'layout' || key === 'paint') {
+        result[key] = {};
+        for (const subKey of Object.keys(obj[key]).sort()) {
+          result[key][subKey] = obj[key][subKey];
+        }
+      }
     }
   }
   for (const key in obj) {
