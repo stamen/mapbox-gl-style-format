@@ -10,7 +10,7 @@
     "build": "parcel build"
   },
   "author": "Stamen Design",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@mapbox/mapbox-gl-style-spec": "^13.23.0",
     "json-stringify-pretty-compact": "^3.0.0",
