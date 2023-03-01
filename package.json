@@ -19,7 +19,7 @@
     "collectCoverage": false
   },
   "dependencies": {
-    "@mapbox/mapbox-gl-style-spec": "^13.23.0",
+    "@mapbox/mapbox-gl-style-spec": "^13.26.0",
     "json-stringify-pretty-compact": "^3.0.0",
     "yargs": "^17.2.1"
   },
