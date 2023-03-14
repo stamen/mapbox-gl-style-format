@@ -1,6 +1,7 @@
-on: push
+on: [push]
 jobs:
-  example_matrix:
+  runs-on: ubuntu-latest
+  matrix:
     strategy:
       matrix:
         version: [16, 18]
@@ -8,3 +9,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.version }}
+      - uses: actions/checkout@v2
+      - id: create-release-presets
+        shell: bash
+        run: |
+          yarn install --network-concurrency 1
