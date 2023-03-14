@@ -1,10 +1,10 @@
 on: [push]
 jobs:
   check-versions-matrix:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         version: [16, 18]
-        os: [ubuntu-latest]
     steps:
       - uses: actions/setup-node@v3
         with:
