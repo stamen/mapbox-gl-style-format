@@ -13,4 +13,4 @@ jobs:
       - id: install
         shell: bash
         run: |
-          yarn install --network-concurrency 1
+          npm install --network-concurrency 1
