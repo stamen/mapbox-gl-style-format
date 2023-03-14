@@ -1,5 +1,5 @@
-var $cMI0G$mapboxmapboxglstylespec = require("@mapbox/mapbox-gl-style-spec");
-var $cMI0G$jsonstringifyprettycompact = require("json-stringify-pretty-compact");
+var $gXNCa$mapboxmapboxglstylespec = require("@mapbox/mapbox-gl-style-spec");
+var $gXNCa$jsonstringifyprettycompact = require("json-stringify-pretty-compact");
 
 var $parcel$global =
 typeof globalThis !== 'undefined'
@@ -39,17 +39,7 @@ if (parcelRequire == null) {
 
   $parcel$global["parcelRequiref3bd"] = parcelRequire;
 }
-"use strict";
-Object.defineProperty(module.exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(module.exports, "format", {
-    enumerable: true,
-    get: function get() {
-        return $349a00930b14e029$var$_format["default"];
-    }
-});
-parcelRequire.register("ctNYT", function(module, exports) {
+parcelRequire.register("7WAU5", function(module, exports) {
 "use strict";
 Object.defineProperty(module.exports, "__esModule", {
     value: true
@@ -57,20 +47,19 @@ Object.defineProperty(module.exports, "__esModule", {
 module.exports["default"] = void 0;
 
 
-var $915ef6a9925cbcd7$var$_jsonStringifyPrettyCompact = $915ef6a9925cbcd7$var$_interopRequireDefault($cMI0G$jsonstringifyprettycompact);
-function $915ef6a9925cbcd7$var$_interopRequireDefault(obj) {
+var $5c8a937f768ee1af$var$_jsonStringifyPrettyCompact = $5c8a937f768ee1af$var$_interopRequireDefault($gXNCa$jsonstringifyprettycompact);
+function $5c8a937f768ee1af$var$_interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         "default": obj
     };
 }
-function $915ef6a9925cbcd7$var$_createForOfIteratorHelper(o, allowArrayLike) {
+function $5c8a937f768ee1af$var$_createForOfIteratorHelper(o, allowArrayLike) {
     var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
     if (!it) {
-        if (Array.isArray(o) || (it = $915ef6a9925cbcd7$var$_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
+        if (Array.isArray(o) || (it = $5c8a937f768ee1af$var$_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
             if (it) o = it;
             var i = 0;
-            var F = function F() {
-            };
+            var F = function F() {};
             return {
                 s: F,
                 n: function n() {
@@ -113,30 +102,28 @@ function $915ef6a9925cbcd7$var$_createForOfIteratorHelper(o, allowArrayLike) {
         }
     };
 }
-function $915ef6a9925cbcd7$var$_unsupportedIterableToArray(o, minLen) {
+function $5c8a937f768ee1af$var$_unsupportedIterableToArray(o, minLen) {
     if (!o) return;
-    if (typeof o === "string") return $915ef6a9925cbcd7$var$_arrayLikeToArray(o, minLen);
+    if (typeof o === "string") return $5c8a937f768ee1af$var$_arrayLikeToArray(o, minLen);
     var n = Object.prototype.toString.call(o).slice(8, -1);
     if (n === "Object" && o.constructor) n = o.constructor.name;
     if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return $915ef6a9925cbcd7$var$_arrayLikeToArray(o, minLen);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return $5c8a937f768ee1af$var$_arrayLikeToArray(o, minLen);
 }
-function $915ef6a9925cbcd7$var$_arrayLikeToArray(arr, len) {
+function $5c8a937f768ee1af$var$_arrayLikeToArray(arr, len) {
     if (len == null || len > arr.length) len = arr.length;
     for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
     return arr2;
 }
 // Borrowed from Mapbox GL JS v1.13 in order to keep consistent formatting with
 // other files formatted with this approach.
-function $915ef6a9925cbcd7$var$sortKeysBy(obj, reference) {
-    var result = {
-    };
+function $5c8a937f768ee1af$var$sortKeysBy(obj, reference) {
+    var result = {};
     for(var key in reference)if (obj[key] !== undefined) {
         result[key] = obj[key];
-        if (key === 'layout' || key === 'paint') {
-            result[key] = {
-            };
-            var _iterator = $915ef6a9925cbcd7$var$_createForOfIteratorHelper(Object.keys(obj[key]).sort()), _step;
+        if (key === "layout" || key === "paint") {
+            result[key] = {};
+            var _iterator = $5c8a937f768ee1af$var$_createForOfIteratorHelper(Object.keys(obj[key]).sort()), _step;
             try {
                 for(_iterator.s(); !(_step = _iterator.n()).done;){
                     var subKey = _step.value;
@@ -152,23 +139,33 @@ function $915ef6a9925cbcd7$var$sortKeysBy(obj, reference) {
     for(var _key in obj)if (result[_key] === undefined) result[_key] = obj[_key];
     return result;
 }
-var $915ef6a9925cbcd7$var$_default = function _default(style) {
+var $5c8a937f768ee1af$var$_default = function _default(style) {
     var spaces = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-    style = $915ef6a9925cbcd7$var$sortKeysBy(style, $cMI0G$mapboxmapboxglstylespec.latest.$root);
+    style = $5c8a937f768ee1af$var$sortKeysBy(style, $gXNCa$mapboxmapboxglstylespec.latest.$root);
     if (style.layers) style.layers = style.layers.map(function(layer) {
-        return $915ef6a9925cbcd7$var$sortKeysBy(layer, $cMI0G$mapboxmapboxglstylespec.latest.layer);
+        return $5c8a937f768ee1af$var$sortKeysBy(layer, $gXNCa$mapboxmapboxglstylespec.latest.layer);
     });
-    return (0, $915ef6a9925cbcd7$var$_jsonStringifyPrettyCompact["default"])(style, {
+    return (0, $5c8a937f768ee1af$var$_jsonStringifyPrettyCompact["default"])(style, {
         indent: spaces
     });
 };
-module.exports["default"] = $915ef6a9925cbcd7$var$_default;
+module.exports["default"] = $5c8a937f768ee1af$var$_default;
 
 });
 
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(module.exports, "format", {
+    enumerable: true,
+    get: function get() {
+        return $4fa36e821943b400$var$_format["default"];
+    }
+});
 
-var $349a00930b14e029$var$_format = $349a00930b14e029$var$_interopRequireDefault((parcelRequire("ctNYT")));
-function $349a00930b14e029$var$_interopRequireDefault(obj) {
+var $4fa36e821943b400$var$_format = $4fa36e821943b400$var$_interopRequireDefault((parcelRequire("7WAU5")));
+function $4fa36e821943b400$var$_interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         "default": obj
     };
