@@ -13,4 +13,5 @@ jobs:
       - id: install
         shell: bash
         run: |
-          npm install --network-concurrency 1
+          echo $(npm -v)
+          npm install
